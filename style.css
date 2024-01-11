@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    line-height: 1.6;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+#search-input{
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+#search-button{
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#search-button:hover{
+    background-color: #18a7cf;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+#search-button:active{
+    transform: translateY(4px);
+}
+
+.Search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Search-result{
+    margin-bottom: 60px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Search-result img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.Search-result:hover img{
+    opacity: .6;
+}
+
+.Search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+#show-more-button{
+    display: block;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+#show-more-button:hover{
+    background-color: #18a7cf;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+#show-more-button:active{
+    transform: translateY(4px);
+}
+
+@media screen and (max-width:768px){
+    .Search-results{
+        padding: 20px;
+    }
+    .Search-result{
+        width: 45%;
+    }
+    
+}
+
+@media screen and (max-width:480px){
+    .Search-results{
+        padding: 20px;
+    }
+    .Search-result{
+        width: 100%;
+    }
+}
